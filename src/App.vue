@@ -2,9 +2,16 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/Tab">Tab</router-link> |
+      <router-link to="/Modal">Modal</router-link> |
+      <router-link to="/Dropdown">Dropdown</router-link> |
+      <router-link to="/Table">Table</router-link> |
+      <router-link to="/Progress">Progress</router-link> |
+      <router-link to="/Breadcrumb">Breadcrumb</router-link> |
+      <router-link to="/Navbar">Navbar</router-link> |
+      <router-link to="/Skeleton">Skeleton</router-link> |
     </nav>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
