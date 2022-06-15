@@ -9,7 +9,7 @@
       <router-link to="/Progress">Progress</router-link> |
       <router-link to="/Breadcrumb">Breadcrumb</router-link> |
       <router-link to="/Navbar">Navbar</router-link> |
-      <router-link to="/Skeleton">Skeleton</router-link> |
+      <router-link to="/Skeleton">Skeleton</router-link>
     </nav>
     <router-view />
   </div>
