@@ -6,6 +6,9 @@ import ModalView from '../views/ModalView.vue'
 import DropdownView from '../views/DropdownView.vue'
 import TableView from '../views/TableView.vue'
 import ProgressView from '../views/ProgressView.vue'
+import BreadcrumbView from '../views/BreadcrumbView.vue'
+import NavbarView from '../views/NavbarView.vue'
+import SkeletonView from '../views/SkeletonView.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +42,21 @@ const routes = [
     path: '/Progress',
     name: 'Progress',
     component: ProgressView
+  },
+  {
+    path: '/Breadcrumb',
+    name: 'Breadcrumb',
+    component: BreadcrumbView
+  },
+  {
+    path: '/Navbar',
+    name: 'Navbar',
+    component: NavbarView
+  },
+  {
+    path: '/Skeleton',
+    name: 'Skeleton',
+    component: SkeletonView
   }
 ]
 
