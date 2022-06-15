@@ -99,7 +99,7 @@ export default {
     #ffeb3b 60%,
     #ffeb3b 80%
   );
-  animation: movemove 0.875s ease-in alternate infinite;
+  animation: movemove 10s linear infinite;
 }
 
 @keyframes movemove {
