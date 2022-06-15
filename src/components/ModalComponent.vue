@@ -14,7 +14,7 @@ export default {
   name: 'ModalBody',
   methods: {
     open (event) {
-      document.getElementById('myModal').style.display = 'block'
+      document.getElementById('myModal').style.display = 'flex'
     }
   },
   created: function () {
@@ -33,7 +33,6 @@ export default {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 20%;
   left: 0;
   top: 0;
   width: 100%;
@@ -46,6 +45,8 @@ export default {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   outline: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
@@ -53,7 +54,7 @@ export default {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
 }
 
 #myBtn {
