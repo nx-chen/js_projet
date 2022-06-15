@@ -1,6 +1,6 @@
 <template>
   <div class="dropleftBody">
-    <button v-on:click="dropLeft" class="dropbtn">Dropleft ⯈</button>
+    <button v-on:click="dropLeft" class="dropbtn">Dropleft ⯇</button>
     <div id="myDropleft" class="dropleft content">
       <button class="item active" v-on:click="clickItem">First item</button>
       <button class="item" v-on:click="clickItem">Second item</button>
