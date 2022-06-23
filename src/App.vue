@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Tab">Tab</router-link> |
-      <router-link to="/Modal">Modal</router-link> |
-      <router-link to="/Dropdown">Dropdown</router-link> |
-      <router-link to="/Table">Table</router-link> |
-      <router-link to="/Progress">Progress</router-link> |
-      <router-link to="/Breadcrumb">Breadcrumb</router-link> |
-      <router-link to="/Navbar">Navbar</router-link> |
-      <router-link to="/Skeleton">Skeleton</router-link>
-    </nav>
+    <div id="my_nav">
+      <NavbarBody :data="data" />
+    </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import NavbarBody from '@/components/NavbarComponent.vue'
+
+export default {
+  name: 'NavbarView',
+  data () {
+    return {
+      data: ['Home', 'Tab', 'Modal', 'Dropdown', 'Table', 'Progress', 'Breadcrumb', 'Navbar', 'Skeleton']
+    }
+  },
+  components: {
+    NavbarBody
+  }
+}
+</script>
 
 <style lang="less">
 #app {
@@ -24,7 +32,7 @@
   color: #2c3e50;
 }
 
-nav {
+#my_nav {
   padding: 30px;
 
   a {

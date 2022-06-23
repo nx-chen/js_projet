@@ -1,10 +1,9 @@
 <template>
-  <div class="navbar">
+  <div>
+    <div class="navbar">
     <div id="Scoll_Navbar">
       <nav id="navbar_sticky">
-        <li><router-link to="/Navbar" fixed>Navbar</router-link></li> |
-        <li><router-link to="/Table">Table</router-link></li>|
-        <li><router-link to="/">Home</router-link></li>
+        <NavbarBody :data="['Navbar', 'Table', 'Home']" />
       </nav>
       <div>
         <p class="long_text">
@@ -54,17 +53,26 @@
         <br />
       </div>
       <nav id="navbar_bottom">
-        <li><router-link to="/Navbar" fixed>Navbar</router-link></li> |
-        <li><router-link to="/Table">Table</router-link></li>|
-        <li><router-link to="/">Home</router-link></li>
+        <NavbarBody :data="['Navbar', 'Table', 'Home']" />
       </nav>
     </div>
+  </div>
   </div>
 </template>
 
 <script>
+import NavbarBody from '@/components/NavbarComponent.vue'
+
 export default {
-  name: 'NavbarView'
+  name: 'NavbarView',
+  data () {
+    return {
+      data: ['Navbar', 'Table', 'Modal']
+    }
+  },
+  components: {
+    NavbarBody
+  }
 }
 </script>
 
@@ -77,7 +85,6 @@ export default {
 }
 
 #navbar_sticky {
-  display: block;
   position: sticky;
   top: 0;
   z-index: 1020;
@@ -86,18 +93,17 @@ export default {
 }
 
 #navbar_bottom {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1030;
-    background-color: rgb(215, 218, 194);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  left: 0;
+  z-index: 1030;
+  background-color: rgb(215, 218, 194);
 }
 
-nav li {
-  display: inline;
-  font-size: 18px;
-  margin: 0px 10px 0px 10px;
+#navbar_bottom #navbarBody{
+  margin-top: 15px;
 }
 
 .long_text {
